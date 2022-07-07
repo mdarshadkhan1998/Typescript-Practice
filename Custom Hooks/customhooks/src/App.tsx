@@ -1,13 +1,8 @@
-import { useState } from 'react';
 import './App.css';
-
+import useTimeout from './Components/useTimeout';
 function App() {
-
-  const [delay, setDelay] = useState(false)
-
-  setTimeout(()=>{
-    setDelay(true)
-  }, 5000)
+  const delay = useTimeout(3)
+  
 
   if(!delay){
     return <h1>loading...</h1>
