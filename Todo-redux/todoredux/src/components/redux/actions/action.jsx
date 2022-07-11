@@ -1,7 +1,14 @@
+export const GET_TODO = "GET_TODO";
 export const ADD_TODO = "ADD_TODO";
 export const EDIT_TODO = "EDIT_TODO";
 export const DELETE_TODO = "DELETE_TODO";
 
+export const fetchingTodo = (fetchedTodo) => {
+    return {
+        type:GET_TODO,
+        payload: fetchedTodo
+    }
+}
 export const addingTodo = (newTodo) => {
     return {
         type:ADD_TODO,
@@ -16,6 +23,7 @@ export const editingTodo = (editedTodo) => {
 }
 export const deletingTodo = (id) => {
     return {
-        type:DELETE_TODO
+        type:DELETE_TODO,
+        payload: id
     }
 }
